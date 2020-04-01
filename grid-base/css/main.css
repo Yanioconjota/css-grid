@@ -1,0 +1,29 @@
+/* Put your code here */
+/*CSS from lectures 13 to 14 */
+.grid {
+  display: grid;
+  grid-template: 100px 100px
+  / 200px auto 150px;
+  /* grid-row-gap: 10px;
+  grid-column-gap: 10px; */
+  grid-gap: 10px;
+}
+
+.grid div:nth-child(6) {
+  /* Just as in flexbox order can be set. The order default's value is 0
+  By changing it by a minor value it will appear in the first postion of
+  our HTML */
+
+  /* This particular property requires extreme real attention and is not
+  recomended to overuse it because it can present issues with e-readers 
+  and accesibility in general */
+  order: -1;
+}
+
+.grid div:nth-child(3) {
+  order: 1;
+}
+
+.grid div:nth-child(2) {
+  order: 2;
+}

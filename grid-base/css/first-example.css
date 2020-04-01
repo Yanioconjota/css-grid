@@ -1,0 +1,42 @@
+/* Put your code here */
+.grid {
+  display: grid;
+  /* According to the ammount of values you add, you define how many rows will appear */
+  /* grid-template-rows: 100px 200px;
+  grid-template-columns: 200px auto 150px; */
+
+  /* A shorthand for those properties is grid template, where the first line represents the rows
+  and the next one, starting with "/" are the columns */
+  grid-template:
+  [row1-start] 100px [row1-end row2-start] 100px [row2-end]
+  / [sidebar] 200px [content-start] auto [content-end sidebar2-start] 150px [sidebar2-end];
+  /* Adtionally names can be setted to row and columns using brakets and used as an "alias" further in your code*/
+}
+
+.grid div:nth-child(1) {
+  /*This selector refers to rearranged Item 1 in HTML */
+  /* This property allows the selected item to expand one extra space. Auto tells us that is doesn't
+  matter in which grid line to start, span followed by the number refers to the element row or column size
+  according to the property suffix -row or -column */
+  grid-row: auto / span 2;
+}
+
+.grid div:nth-child(2) {
+  /*These properties are ranged based and they refer to the horizontal and vertical grid lines,
+  where do they start and where do they end. Unlike JS or other programming languages,
+  the starting position is always 1 */
+  grid-row-start: row2-start;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  /* In this example the selected item ".grid div:nth-child(2) --> Item 2" is moved to the position
+  described in the css properties */
+}
+
+.grid div:nth-child(5) {
+  /*A shorthanded option will be: */
+  grid-row: row1-start / row1-end;
+  grid-column: sidebar / content-end;
+  /* In this example the selected item ".grid div:nth-child(5) --> Item 5" is moved to the position
+  described in the css properties and even can be expanded */
+}
