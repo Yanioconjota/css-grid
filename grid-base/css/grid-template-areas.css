@@ -1,0 +1,38 @@
+/* Put your code here */
+.grid {
+  display: grid;
+  grid-template: 100px 100px 100px
+  / 200px auto 150px;
+  /*
+  Grid template area is a way to arrage grid elements a simple grid template.
+  Notice that the letters are linked to a selector located in am specific grid-area;
+  */
+  grid-template-areas:
+  "E E A"
+  "B C A"
+  "B D F"
+}
+
+.grid div:nth-child(1) {
+  grid-area: A;
+}
+
+.grid div:nth-child(2) {
+  grid-area: B;
+}
+
+.grid div:nth-child(3) {
+  grid-area: C;
+}
+
+.grid div:nth-child(4) {
+  grid-area: D;
+}
+
+.grid div:nth-child(5) {
+  grid-area: E;
+}
+
+.grid div:nth-child(6) {
+  grid-area: F;
+}

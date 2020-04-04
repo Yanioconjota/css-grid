@@ -1,0 +1,31 @@
+/* Put your code here */
+.grid {
+  display: grid;
+  grid-template:
+  100px 100px 100px
+  / 200px auto 150px;
+  /* Adtionally names can be setted to row and columns using brakets and used as an "alias" further in your code*/
+}
+
+.grid div:nth-child(1) {
+  /*This selector refers to rearranged Item 1 in HTML */
+  /* This property allows the selected item to expand one extra space. Auto tells us that is doesn't
+  matter in which grid line to start, span followed by the number refers to the element row or column size
+  according to the property suffix -row or -column */
+  grid-row: auto / span 2;
+}
+
+.grid div:nth-child(2) {
+  /* Compared to first-example.css, these properties can also be shorthanded with the grid-area property 
+  grid-area: <row-start> / <column-start> / <row-end> / <column-end>; The first 2 values represents the
+  top-left corner of the grid-area and the last 2 values are the bottom-right corner of the grid-area */
+  grid-area: row2-start / 1 / 4 / 2;
+}
+
+.grid div:nth-child(5) {
+  /*A shorthanded option will be: */
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+  /* In this example the selected item ".grid div:nth-child(5) --> Item 5" is moved to the position
+  described in the css properties and even can be expanded */
+}

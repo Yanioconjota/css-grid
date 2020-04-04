@@ -8,7 +8,7 @@
   /* A shorthand for those properties is grid template, where the first line represents the rows
   and the next one, starting with "/" are the columns */
   grid-template:
-  [row1-start] 100px [row1-end row2-start] 100px [row2-end]
+  [row1-start] 100px [row1-end row2-start] 100px [row2-end] 100px 
   / [sidebar] 200px [content-start] auto [content-end sidebar2-start] 150px [sidebar2-end];
   /* Adtionally names can be setted to row and columns using brakets and used as an "alias" further in your code*/
 }
